@@ -28,14 +28,12 @@ function clearContainer() {
     container.innerHTML = ''
     }
 
+// button choose pixel size
 pixeli.addEventListener('click', () => {
     clearContainer();
-    input = prompt('give input 0-100');
-    if (0 < input < 101){
-    divGrid(input)
-    }
-    else {
-        prompt('luku 0-100')
+    let vastaus = prompt('valitse pixelikoko 0-100');
+    if (0 <= vastaus && vastaus < 100 ){
+        divGrid(vastaus)
     }
 });
 

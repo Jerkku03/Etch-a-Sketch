@@ -15,7 +15,6 @@ function divGrid(koko) {
 
     for (c = 0; c < (koko * koko); c++) {
         let cell = document.createElement("div");
-        cell.style.cssText = 'background-color: black; min-height: 5px; min-width:5px;'
         cell.addEventListener('mouseover', () => {
             cell.style.backgroundColor = 'white';
         }) 

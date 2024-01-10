@@ -5,8 +5,7 @@ const container = document.getElementById('container');
 
 const pixeli = document.getElementById('pixeli');
 
-
-
+const alkuTila = 16
 
 
 function divGrid(koko) {
@@ -24,12 +23,23 @@ function divGrid(koko) {
         container.appendChild(cell);
     };
 };
-pixeli.addEventListener('click', () => {
-    input = prompt('give input 0-100');
-    if (0 < input <= 100){
-    divGrid(input)
+
+function clearContainer() {
+    container.innerHTML = ''
     }
 
+pixeli.addEventListener('click', () => {
+    clearContainer();
+    input = prompt('give input 0-100');
+    if (0 < input < 101){
+    divGrid(input)
+    }
+    else {
+        prompt('luku 0-100')
+    }
 });
+
+
+
 
 });
